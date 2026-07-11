@@ -1,7 +1,7 @@
-# Hellwyrm Compass
+# Hellworm Hunter
 
-Landing page for **Hellwyrm Compass** — a lightweight Overwolf overlay for
-Diablo IV Helltides: a compass arrow to the nearest Hellwyrm spawn, a live
+Landing page for **Hellworm Hunter** — a lightweight Overwolf overlay for
+Diablo IV Helltides: a compass arrow to the nearest Hellworm spawn, a live
 zone map of community-sourced spawn locations, and a route planner.
 
 Built exclusively on Overwolf's official Diablo IV game events (player
