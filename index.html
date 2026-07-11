@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hellwyrm Compass — Helltide navigation for Diablo IV</title>
+<meta name="description" content="A lightweight Overwolf overlay that points you to the next Hellwyrm spawn during Diablo IV Helltides. Compass arrow, live zone map, route planner.">
+<style>
+  :root{
+    --bg:#0d0a09; --panel:#171110; --edge:#2e221d;
+    --ink:#e9ded2; --dim:#9c8a7c;
+    --ember:#ff5c2e; --ember-dim:#b23a1a; --gold:#e8b34a; --green:#3ddc63;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,'Times New Roman',serif}
+  .wrap{max-width:960px;margin:0 auto;padding:0 1.4rem}
+  header{padding:4.5rem 0 3rem;text-align:left;border-bottom:1px solid var(--edge);
+         background:radial-gradient(ellipse 90% 70% at 70% -20%, #2a130c 0%, transparent 60%)}
+  .badge{display:inline-block;font:600 .72rem/1 ui-sans-serif,system-ui,sans-serif;
+         letter-spacing:.12em;text-transform:uppercase;color:var(--gold);
+         border:1px solid #5a4420;border-radius:999px;padding:.45em 1em;margin-bottom:1.4rem}
+  h1{font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.08;letter-spacing:.01em;text-wrap:balance}
+  h1 .ember{color:var(--ember)}
+  .tag{color:var(--dim);font-size:1.15rem;max-width:34em;margin-top:1rem}
+  .compass{float:right;width:120px;height:120px;margin:0 0 1rem 2rem;position:relative}
+  .compass svg{width:100%;height:100%}
+  main{padding:3rem 0}
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem;margin:2.2rem 0 3rem}
+  .card{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:1.4rem 1.5rem}
+  .card h3{font-size:1.05rem;margin-bottom:.5rem;color:var(--ink)}
+  .card p{color:var(--dim);font-size:.95rem}
+  .card .k{font:600 .68rem/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.14em;
+           text-transform:uppercase;display:block;margin-bottom:.9rem}
+  .k.free{color:var(--green)} .k.paid{color:var(--gold)}
+  .fair{border-left:3px solid var(--ember-dim);background:var(--panel);
+        padding:1.3rem 1.6rem;border-radius:0 12px 12px 0;margin:0 0 3rem}
+  .fair h2{font-size:1.05rem;margin-bottom:.5rem}
+  .fair p{color:var(--dim);font-size:.95rem;max-width:60ch}
+  footer{border-top:1px solid var(--edge);padding:2rem 0 3rem;color:var(--dim);
+         font:.85rem/1.7 ui-sans-serif,system-ui,sans-serif}
+  footer a{color:var(--gold);text-decoration:none}
+  @media (max-width:600px){.compass{float:none;margin:0 0 1.5rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="compass" aria-hidden="true">
+      <svg viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="54" fill="none" stroke="#2e221d" stroke-width="3"/>
+        <circle cx="60" cy="60" r="44" fill="none" stroke="#1e1512" stroke-width="1.5"/>
+        <polygon points="60,14 72,66 60,56 48,66" fill="#ff5c2e"/>
+        <polygon points="60,106 50,70 60,78 70,70" fill="#4a352c"/>
+        <circle cx="60" cy="60" r="5" fill="#e8b34a"/>
+      </svg>
+    </div>
+    <span class="badge">In development · Overwolf app proposal under review</span>
+    <h1>Hellwyrm <span class="ember">Compass</span></h1>
+    <p class="tag">Stop circling the Helltide. A quiet overlay arrow that always knows
+    where the next Hellwyrm spawn is — and the fastest order to run them.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="features">
+      <div class="card">
+        <span class="k free">Free</span>
+        <h3>The compass</h3>
+        <p>A single click-through arrow beside your character pointing to the nearest
+        known Hellwyrm spawn, with live distance. Appears during active Helltides,
+        stays out of your way otherwise.</p>
+      </div>
+      <div class="card">
+        <span class="k free">Free</span>
+        <h3>Live zone map</h3>
+        <p>A small always-on-top zone map with every community-sourced spawn marked.
+        Markers flip as you clear them and re-arm on the respawn cycle, so you always
+        know what's left.</p>
+      </div>
+      <div class="card">
+        <span class="k paid">One-time unlock</span>
+        <h3>Route planner</h3>
+        <p>Click spawns in the order you want to run them and the compass walks you
+        through the circuit, looping until the Helltide ends. Save named routes per
+        zone and reload them next time. One purchase, yours forever — no subscription.</p>
+      </div>
+    </div>
+
+    <div class="fair">
+      <h2>Built the right way</h2>
+      <p>Hellwyrm Compass reads only Overwolf's official Diablo IV game events to know
+      where you are. No memory reading, no input automation, no game-file access —
+      just a rendered overlay and public community spawn data. Purely informational,
+      fully within Overwolf's game compliance principles.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Hellwyrm Compass · an independent Overwolf app by James Fairchild<br>
+    Contact: <a href="mailto:orbitzalot@yahoo.com">orbitzalot@yahoo.com</a> ·
+    Diablo® IV is a trademark of Blizzard Entertainment. This project is not
+    affiliated with or endorsed by Blizzard or Overwolf.
+  </div>
+</footer>
+</body>
+</html>
