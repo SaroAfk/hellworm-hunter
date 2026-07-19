@@ -91,11 +91,13 @@
       <li><strong>License key</strong> — a random, non-personal code generated on your device
       the first time you launch the app. It is not linked to your identity. It is used to check
       which styles/features you have purchased.</li>
-      <li><strong>Trial fingerprint</strong> — a one-way <strong>hash</strong> derived from
-      hardware characteristics (operating system, CPU, motherboard serial, memory). Only the
-      hash is sent; the underlying hardware values are <strong>not</strong> transmitted and the
-      hash cannot be reversed to identify you. It exists solely to enforce the one-hour free
-      trial and prevent it from being reset.</li>
+      <li><strong>Hardware fingerprint</strong> — a one-way <strong>hash</strong> derived from
+      hardware characteristics (operating system, CPU, manufacturer, model, motherboard serial,
+      memory, logical CPU count, and other non-identifying hardware attributes). Only the hash
+      is sent; the underlying hardware values are <strong>not</strong> transmitted and the hash
+      cannot be reversed to identify you. It is used to enforce the one-hour free trial (so it
+      can't be reset) and to tie a purchased license to the device that activated it, which
+      keeps a single license from being shared across many machines.</li>
     </ol>
     <p>As with any internet request, our hosting provider (Cloudflare) may process your IP
     address to route the request; we do not use it to build a profile.</p>
