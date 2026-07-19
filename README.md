@@ -1,3 +1,5 @@
+<img src="hellworm.png" alt="Hellworm Hunter logo — a molten, coiled hellworm" width="140" align="right">
+
 # Hellworm Hunter
 
 Landing page for **Hellworm Hunter** — a lightweight Overwolf overlay for
